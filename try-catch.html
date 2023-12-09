@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Calculator object</title>
+</head>
+<body>
+    <script>
+        const calculator = {
+            add : function (a, b) {
+                return a + b;
+            },
+            substract : function (a, b) {
+                return a - b;
+            },
+            multiply : function (a, b) {
+                return a * b;
+            },
+            devide : function (a, b) {
+                try {
+                    if (b === 0) {
+                        throw new Error("Division by zero is not allowed.");;
+                    }
+                    return a / b;
+                } catch(error) {
+                    console.log(error)
+                }
+            },
+        };
+
+        console.log("Addition: ", calculator.add(5, 3));
+        console.log("Substraction: ", calculator.substract(5, 3));
+        console.log("Multiplication: ", calculator.multiply(5, 3));
+        console.log("Division: ", calculator.devide(5, 0));
+    </script>
+    
+</body>
+</html>
